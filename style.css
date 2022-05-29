@@ -1,0 +1,39 @@
+body {
+    background-color: darkseagreen;
+}
+
+#score {
+    font-size: 38px;
+    margin-left: 10px;
+    float: left;
+}
+
+#timer {
+    font-size: 38px;
+    float:right;
+    margin-right: 100px;
+}
+
+#name_of_sketch {
+    color:khaki;
+    font-size: 24px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-decoration: underline;
+}
+
+h1 {
+    font-size: 50px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: firebrick;
+    font-weight: bolder;
+}
+
+button {
+    margin-left: 20px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#gussed_sketch_name, #confidence {
+    font-size: 18px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
