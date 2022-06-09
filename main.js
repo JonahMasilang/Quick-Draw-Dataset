@@ -22,13 +22,20 @@ function setup() {
     canvas = createCanvas(280, 280);
     canvas.center();
     background("white");
+
+    classifyCanvas();
 }
 
 function draw() {
 
-    function check_sketch() {
+    strokeWeight(13);
+    stroke(0);
 
+    if (mouseIsPressed) {
+        line(pmouseX, pmouseY, mouseX, mouseY);
     }
+
+    check_sketch();
     
     if(drawn_sketch == sketch) {
         answer_holder = "set";
@@ -55,4 +62,18 @@ function check_sketch() {
             updateCanvas();
         }
     }
+}
+
+function classifyCanvas() {
+    classifier.classify(canvas, gotResult);
+}
+
+function gotResult(error, results) {
+    if (error) {
+        console.error(error);
+    }
+    console.log(results);
+    document.getElementById('gussed_sketch_name').innerHTML = 'Your Sketch: ' + results[0].label;
+
+    document.getElementById('confidence').innerHTML = 'Confidence: ' + Math.round(result[0].confidence * 100) + '%';
 }
